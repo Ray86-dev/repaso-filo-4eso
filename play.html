@@ -136,7 +136,7 @@ function connect(){
       if(g!==connectGen)return;
       if(!connOpen){
         try{conn.close()}catch(e){}
-        if(!joined)jstat('La red no deja conectar con la sala. Si usas el wifi del centro, prueba con datos móviles. Reintentando…');
+        if(!joined)jstat('No se ha podido conectar con la sala. Comprueba que siga abierta. Si usas wifi, puedes probar con datos móviles. Reintentando…');
         setTimeout(function(){if(g===connectGen)connect()},4000);
       }
     },12000);
